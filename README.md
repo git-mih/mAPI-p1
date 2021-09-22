@@ -5,3 +5,5 @@
 - Word completion;
 - Search the API using debouncing to ensure that requests dont fire so often;
 - [Bulma](https://bulma.io/) CSS framework.
+
+Feel free for ask any question about the Project/Code.
