@@ -6,14 +6,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
   <link rel="stylesheet" href="style.css" />
+  <title>Mozinha indecisa</title>
 </head>
 
 <body>
-  <section class="hero is-primary is-bold">
+  <section class="hero is-light is-bold">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Movie Fight
+          Mozinha indecisa API
           <span class="icon">
             <i class="fas fa-film"></i>
           </span>
@@ -23,12 +24,26 @@
   </section>
 
   <div class="container">
-    <div class="autocomplete"></div>
-    <div id="summary"></div>
+    <div class="columns">
+      <div class="column">
+        <div id="left-autocomplete"></div>
+        <div id="left-summary"></div>
+      </div>
+
+      <div class="column">
+        <div id="right-autocomplete"></div>
+        <div id="right-summary"></div>
+      </div>
+    </div>
   </div>
 
+  <div class="column is-half notification is-danger tutorial">
+    <h1 class="title">Search For a Movie or Series on both sides</h1>
+    <p class="subtilte">And we are going to compare both for you!</p>
+  </div>
 
   <script src="utils.js"></script>
+  <script src="autocomplete.js"></script>
   <script src="main.js"></script>
 </body>
 
