@@ -19,7 +19,7 @@ const createAutoComplete = ({
     const dropdown = root.querySelector('.dropdown');
     const resultsWrapper = root.querySelector('.results');
 
-    const onInput = async function (event) {
+    const onInput = debounce(async function(event) {
         const items = await fetchData(event.target.value);
 
         if (!items.length) {
@@ -43,9 +43,9 @@ const createAutoComplete = ({
                 onOptionSelect(item)
             })
         }
-    };
+    });
 
-    input.addEventListener('input', debounce(onInput));
+    input.addEventListener('input', onInput);
 
     document.addEventListener('click', event => {
         if (!root.contains(event.target)) {
